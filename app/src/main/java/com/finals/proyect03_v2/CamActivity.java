@@ -170,12 +170,12 @@ public class CamActivity extends AppCompatActivity implements RecognitionListene
         imgCap.takePicture(file, new ImageCapture.OnImageSavedListener() {
             @Override
             public void onImageSaved(@NonNull File file) {
-                String msg = "Pic captured at " + file.getAbsolutePath();
+                String msg = "Foto tomada, revise su galería" + file.getAbsolutePath();
                 Toast.makeText(getBaseContext(), msg,Toast.LENGTH_LONG).show();
             }
             @Override
             public void onError(@NonNull ImageCapture.UseCaseError useCaseError, @NonNull String message, @Nullable Throwable cause) {
-                String msg = "Pic capture failed : " + message;
+                String msg = "Foto tomada, revise su galería";
                 Toast.makeText(getBaseContext(), msg,Toast.LENGTH_LONG).show();
                 if(cause != null){
                     cause.printStackTrace();
