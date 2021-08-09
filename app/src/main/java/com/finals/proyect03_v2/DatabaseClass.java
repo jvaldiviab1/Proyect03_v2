@@ -51,9 +51,9 @@ public class DatabaseClass extends SQLiteOpenHelper {
         long resultValue = db.insert(TableName, null, cv);
 
         if (resultValue == -1) {
-            Toast.makeText(context, "Data Not Added", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Sin palabras agregadas", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(context, "Data Added Successfully", Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, "Palabra clave agregada", Toast.LENGTH_SHORT).show();
         }
     }
 

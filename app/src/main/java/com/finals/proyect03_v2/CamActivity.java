@@ -21,6 +21,7 @@ import android.database.Cursor;
 import android.graphics.Matrix;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
@@ -82,7 +83,7 @@ public class CamActivity extends AppCompatActivity implements RecognitionListene
         }
 
         textureView=(TextureView)findViewById(R.id.view_finds);
-        sw1=(Switch)findViewById(R.id.switch1);
+
         if(allPermissionGranted()){
             startCamera();
         }
@@ -181,6 +182,8 @@ public class CamActivity extends AppCompatActivity implements RecognitionListene
                 }
             }
         });
+        Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivity(intent);
     }
 
     @SuppressLint("RestrictedApi")
@@ -242,7 +245,7 @@ public class CamActivity extends AppCompatActivity implements RecognitionListene
             if(allPermissionGranted()){
                 startCamera();
             } else{
-                Toast.makeText(this, "Permissions not granted by the user.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Permisos no garantizados para el ususario.", Toast.LENGTH_SHORT).show();
                 finish();
             }
         }

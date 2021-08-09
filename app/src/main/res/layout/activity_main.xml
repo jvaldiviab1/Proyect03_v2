@@ -58,8 +58,8 @@
 
         <ImageButton
             android:id="@+id/btnSpeak"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="116dp"
+            android:layout_height="88dp"
             android:background="@null"
             android:padding="16dp"
             android:scaleType="fitCenter"
@@ -71,6 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/btnSpeak"
             android:layout_margin="10dp"
-            android:text="Tap on mic to start" />
+            android:text="Presione para grabar" />
     </LinearLayout>
 </RelativeLayout>
